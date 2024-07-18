@@ -305,10 +305,12 @@ if (!doNotTrack) {
 <p>Diffusion models are a significant type of generative model. They start by defining a forward process that incrementally adds noise to the data distribution; then, they learn a reverse process that gradually samples from random noise to obtain the data distribution. In recent years, a series of image or video generation models based on diffusion models have emerged, such as Stable Diffusion XL(<a href="https://arxiv.org/abs/2307.01952">Dustin Podell et al., 2023</a>), Dall-E 3(<a href="https://cdn.openai.com/papers/dall-e-3.pdf">James Betker et al., 2023</a>), Sora(<a href="https://openai.com/index/video-generation-models-as-world-simulators/">OpenAI, 2024</a>), and so on. Although diffusion models have achieved astounding accomplishments, they still face some challenges, one of which is the problem of Lipschitz singularities. This blog will focus on discussing the Lipschitz singularities issue in diffusion models.</p>
 <br>
 <h2 id="what-is-lipschitz-singularities">What is Lipschitz singularities issue in diffusion models?<a hidden class="anchor" aria-hidden="true" href="#what-is-lipschitz-singularities">#</a></h1>
-    <div style="text-align: center;">
-        <img src="../../images/lipschitz_singularities.png" style="width: 50%;" class="center" />
-        <figcaption>Fig. 1. Lipschitz singularities issue observed in practice.</figcaption>
-    </div>
+
+<figure class="center-figure">
+    <img src="../../images/lipschitz_singularities.png" alt="Lipschitz singularities" style="width: 50%;">
+    <figcaption>Fig. 1. Lipschitz singularities issue observed in practice.</figcaption>
+</figure>
+    
 <p>Several diffusion-based generative models have been proposed with similar ideas underneath, including <em>diffusion probabilistic models</em> (<a href="https://arxiv.org/abs/1503.03585">Sohl-Dickstein et al., 2015</a>), <em>noise-conditioned score network</em> (<strong>NCSN</strong>; <a href="https://arxiv.org/abs/1907.05600">Yang &amp; Ermon, 2019</a>), and <em>denoising diffusion probabilistic models</em> (<strong>DDPM</strong>; <a href="https://arxiv.org/abs/2006.11239">Ho et al. 2020</a>).</p>
 <br>
 <h2 id="Why-lipschitz-singularities-happen">Why it happens?<a hidden class="anchor" aria-hidden="true" href="#Why-lipschitz-singularities-happen">#</a></h2>

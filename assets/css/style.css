@@ -266,6 +266,18 @@
     border-bottom: 1px solid var(--primary);
   }
   
+  .center-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .center-figure img {
+    max-width: 100%;
+    height: auto;
+  }
+  
   .top-link {
     visibility: hidden;
     position: fixed;
