@@ -11,8 +11,8 @@
 <meta name="description" content="[Updated on 2024-06-28]: Discuss the Lipschitz singularities in diffusion models.">
 <meta name="author" content="Zhantao Yang">
 <link rel="canonical" href="https://lilianweng.github.io/posts/2021-07-11-diffusion-models/" />
-<link href="assets/css/style.css" rel="preload stylesheet">
-<script defer src="assets/js/style.js"></script>
+<link href="../../assets/css/style.css" rel="preload stylesheet">
+<script defer src="../../assets/js/style.js"></script>
 <link rel="icon" href="https://lilianweng.github.io/favicon_peach.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lilianweng.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lilianweng.github.io/favicon-32x32.png">
@@ -313,7 +313,7 @@ if (!doNotTrack) {
 <p>Diffusion models are a significant type of generative model. They start by defining a forward process that incrementally adds noise to the data distribution; then, they learn a reverse process that gradually samples from random noise to obtain the data distribution. In recent years, a series of image or video generation models based on diffusion models have emerged, such as Stable Diffusion XL(<a href="https://arxiv.org/abs/2307.01952">Dustin Podell et al., 2023</a>), Dall-E 3(<a href="https://cdn.openai.com/papers/dall-e-3.pdf">James Betker et al., 2023</a>), Sora(<a href="https://openai.com/index/video-generation-models-as-world-simulators/">OpenAI, 2024</a>), and so on. Although diffusion models have achieved astounding accomplishments, they still face some challenges, one of which is the problem of Lipschitz singularities. This blog will focus on discussing the Lipschitz singularities issue in diffusion models.</p>
 <br>
 <h2 id="what-is-lipschitz-singularities">What is Lipschitz singularities issue in diffusion models?<a hidden class="anchor" aria-hidden="true" href="#what-is-lipschitz-singularities">#</a></h1>
-<img src="images/lipschitz_singularities.png" style="width: 50%;" class="center" />
+<img src="../../images/lipschitz_singularities.png" style="width: 50%;" class="center" />
 <figcaption>Fig. 1. Lipschitz singularities issue observed in practice.</figcaption>
 <p>Several diffusion-based generative models have been proposed with similar ideas underneath, including <em>diffusion probabilistic models</em> (<a href="https://arxiv.org/abs/1503.03585">Sohl-Dickstein et al., 2015</a>), <em>noise-conditioned score network</em> (<strong>NCSN</strong>; <a href="https://arxiv.org/abs/1907.05600">Yang &amp; Ermon, 2019</a>), and <em>denoising diffusion probabilistic models</em> (<strong>DDPM</strong>; <a href="https://arxiv.org/abs/2006.11239">Ho et al. 2020</a>).</p>
 <br>
